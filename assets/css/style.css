@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('../css/bootstrap.css');
+@import url('../css/animate.css');
+@import url('../css/jquery.fancybox.min.css');
+@import url('../css/slick.css');
+@import url('../css/xicon.css');
+@import url('../css/variables.css');
+@import url('../css/mobile-nav.css');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+#jqcheck {
+    background: #fff9d7;
+    text-align: center;
+    color: #333;
+    padding: 10px 0px;
+    font-size: 13px;
+    font-weight: bold;
+    position: fixed;
+    z-index: 9991;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* text selection color */
+::-moz-selection {
+    background: var(--primary-color);
+    color: red;
+    text-shadow: none;
+}
+
+::selection {
+    background: black;
+    color: var(--theme-white);
+    text-shadow: none;
+}
+
+/*/* browser scroller style */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #ffffff00;
+    -webkit-border-radius: 0px;
+    border-left: 1px solid #888;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    -webkit-border-radius: 0px;
+    background: linear-gradient(-45deg, #183028, #152723, #0c201b, #21483c);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--base-font-size);
+}
+
+.ff-primary {
+    font-family: var(--base-font-family);
+}
+
+.ff-secondary {
+    font-family: var(--secondary-font-family);
+}
+
+
+section.header {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    z-index: 9;
+    top: 47px;
+}
+
+.main-menu ul li {
+    display: inline;
+    margin: 0 0 0 13px;
+}
+
+.main-menu {
+    text-align: right;
+}
+
+.main-menu ul {
+    margin: 0;
+}
+
+.main-menu ul li a {
+    font-size: 16px;
+    transition: all .6s ease;
+    color: white;
+    text-decoration: none;
+}
+
+.main-menu ul li a:hover {
+    color: #bbb0b0;
+}
+
+section.banner-content:before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    top: 0;
+    background: linear-gradient(-45deg, #183028, #152723, #0c201b, #21483c);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+section.banner-content {
+    padding: 235px 0 235px 0;
+    position: relative;
+}
+
+.bnner-contnt h1 {
+    font-size: 52px;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.bnner-contnt p {
+    font-size: 25px;
+    margin: 0;
+    color: grey;
+}
+
+section.image-sec img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.scroll-bar {
+    position: fixed;
+    z-index: 99;
+    top: 260px;
+    left: 4px;
+}
+
+.scroll-bar h3 {
+    font-size: 14px;
+    transform: rotate(91deg);
+    margin: 30px 0 0px 0;
+    color: #f5efef;
+    text-transform: capitalize;
+}
+
+.scroll-width {
+    height: 94px;
+    width: 1px;
+    background: #585858b0;
+    left: 50%;
+    position: absolute;
+    top: 69px;
+    transform: translate(-50%);
+    overflow: hidden;
+}
+
+.scroll-vertical {
+    height: 43px;
+    width: 1px;
+    background: #ffffff;
+    left: 50%;
+    position: absolute;
+    top: 143px;
+    transform: translate(-50%);
+    animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+    from {
+        top: -150px;
+    }
+
+    to {
+        top: 99px;
+    }
+}
+
+#viewport {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#scroll-container {
+    width: 100%;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .07) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255, 255, 255, .07) 2px, transparent 2px),
+        linear-gradient(rgba(255, 255, 255, .06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .06) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+section.about-me:before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    top: 0;
+    background: linear-gradient(-45deg, #183028, #152723, #0c201b, #21483c);
+    background-size: 400% 400%;
+    animation: gradient 18s ease infinite;
+    height: 100%;
+}
+
+.about-txt h2 {
+    color: white;
+    font-size: 24px;
+    padding: 0 190px 80px 0;
+}
+
+section.about-me {
+    position: relative;
+    height: 100vh;
+    padding: 50px 0 40px 0;
+}
+
+.ronald-info h3 {
+    font-size: 18px;
+    color: #c2daccd9;
+    line-height: 33px;
+}
+
+.ronald-info {
+    padding: 88px 0 60px 0;
+}
+
+.about-ronald {
+    padding-top: 50px;
+}
+
+.exterioir-content h2 {
+    font-size: 45px;
+    position: relative;
+    color: white;
+    padding: 0 0 40px 0;
+}
+
+.exterioir-content a {
+    display: inline-block;
+    border: 2px solid white;
+    padding: 18px 70px;
+    font-size: 15px;
+    font-weight: 500;
+    overflow: hidden;
+    z-index: 999;
+    position: relative;
+    text-decoration: none;
+    border-radius: 40px;
+    color: white;
+}
+
+.exterioir-content h2:before {
+    position: absolute;
+    content: "01";
+    font-size: 12px;
+    left: -12px;
+    top: 9px;
+}
+
+
+
+
+/*/scroll-animation//*/
+.js-cont {
+    position: relative;
+    width: 100% !important;
+    height: auto;
+}
+
+.js-scroll {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    will-change: transform;
+}
+
+img.exterier-bg {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.exterioir-content a:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    background: white;
+    transition: all .6s ease;
+    color: black;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: all .6s ease;
+    z-index: -1;
+    border-radius: 60px;
+}
+
+.exterioir-content a:hover:before {
+    width: 100%;
+}
+
+.exterioir-content a:hover {
+    color: black;
+    border: 1px solid black;
+}
+
+section.exterioir {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    padding: 480px 0 0 0;
+}
+
+img.exterier-bg {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+    z-index: -1;
+}
+
+.exterioir-content a:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    background: white;
+    transition: all .6s ease;
+    color: black;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: all .6s ease;
+    z-index: -1;
+    border-radius: 60px;
+}
+
+.exterioir-content a:hover:before {
+    width: 100%;
+}
+
+.exterioir-content a:hover {
+    color: black;
+    border: 1px solid black;
+}
+
+section.gallery {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 60px 0 0 0;
+}
+
+section.gallery h4 {
+    font-size: 37px;
+    line-height: 45.22px;
+    color: white;
+}
+
+section.gallery:before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    top: 0;
+    background: linear-gradient(-45deg, #183028, #152723, #0c201b, #21483c);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100%;
+}
+
+section.gallery {
+    height: auto;
+    position: relative;
+    width: 100%;
+    padding: 220px 0 82px 0;
+}
+
+section.gallery h4 {
+    font-size: 44px;
+    line-height: 53.22px;
+    color: white;
+    padding: 0 11px 180px 0;
+}
+
+section.gallery:before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    top: 0;
+    background: linear-gradient(-45deg, #183028, #152723, #0c201b, #21483c);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100%;
+}
+
+.gallery-img a {
+    cursor: zoom-in;
+    transition: all .6s ease;
+}
+
+.gallery-img img:hover {
+    transform: scale(1.04);
+}
+
+.gallery-img img {
+    transition: all .6s ease;
+    width: 90%;
+}
+
+.gallery-img {
+    margin: 130px 0 0 0;
+}
+
+.img-side {
+    margin: 0;
+    text-align: right;
+}
+
+.img-side img {
+    width: 95%;
+    height: 460px;
+    object-fit: cover;
+}
+
+.gallery-content h2 {
+    font-size: 35px;
+    color: white;
+    padding: 0 348px 0 0;
+}
+
+.gallery-content p {
+    color: #a7bfb2;
+    font-size: 14px;
+    line-height: 29px;
+    padding: 16px 327px 22px 0;
+}
+
+.gallery-content a {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 14px 40px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 80px;
+    transition: all .6s ease;
+}
+
+.gallery-content {
+    margin: -90px 0 0 0;
+    padding: 0 0 150px 0;
+}
+
+.fancybox-image,
+.fancybox-spaceball {
+    cursor: zoom-out;
+}
+
+.gallery-content a:hover {
+    background: white;
+    color: black;
+}
+
+.beleve-txt h2 {
+    font-size: 64px;
+    color: white;
+}
+
+.beleve-txt {
+    padding: 0 0 0 130px;
+}
+
+.beleve-para p {
+    color: #9fb7ab;
+    font-size: 15px;
+    padding: 240px 110px 0 1px;
+}
+
+.beleve-para {
+    padding: 30px 210px 0px 0;
+}
+
+.gallery-next img {
+    width: 85% !important;
+    height: 400px;
+    transition: all .6s ease;
+    object-fit: cover;
+}
+
+
+.gallery-nxt-side img {
+    width: 101%;
+    height: 400px;
+    object-fit: cover;
+    margin: 90px 0 0 0;
+}
+
+.galry-btm-content h4 {
+    font-size: 26px !important;
+    line-height: normal !important;
+    padding: 0 110px 20px 0 !important;
+}
+
+.galry-btm-content {
+    color: white;
+    padding: 0 270px 0 0;
+}
+
+.galry-btm-content p {
+    font-size: 15px;
+    color: #99b1a5;
+    padding: 0 120px 0 0;
+}
+
+.gallery-next {
+    padding: 0 0 242px 0;
+}
+
+section.visual:before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    top: 0;
+    background: linear-gradient(-45deg, #183028, #152723, #0c201b, #21483c);
+    background-size: 400% 400%;
+    animation: gradient 18s ease infinite;
+    height: 100%;
+}
+
+section.visual {
+    position: relative;
+    padding: 18px 0 125px 0;
+}
+
+.visual-txt h2 {
+    color: white;
+    font-size: 39px;
+}
+
+.visual-txt p {
+    font-size: 17px;
+    color: #99b1a5;
+    margin: 20px 0 0 0;
+}
+
+.visual-txt a {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid white;
+    padding: 15px 46px;
+    text-decoration: none;
+    border-radius: 60px;
+    color: white;
+    margin: 29px 0 0 0;
+}
+
+.interset {
+    width: 100%;
+    text-align: center;
+    padding: 150px 0 0 0;
+}
+
+.interset h2 {
+    font-size: 80px;
+    color: white;
+}
+
+.interset p {
+    font-size: 35px;
+    color: white;
+}
+
+.visual-txt {
+    padding: 0 0 140px 0;
+}
+
+.ftr-div {
+    width: 100%;
+    padding: 165px 0 0 0;
+}
+
+.ftr-email label {
+    display: block;
+    margin: 0;
+    padding: 8px 0px;
+    color: #8ad687;
+    font-size: 16px;
+}
+
+.ftr-email a {
+    transform: scale(1);
+    font-size: 35px;
+    transition: all .6s ease;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid;
+    border-color: #504d4d;
+    display: inline-block;
+    margin: 9px 0 27px 0;
+}
+
+.ftr-email a:hover {
+    color: #9c9c9c;
+    border-color: #82cb81;
+    transform: scale(0.965);
+}
+
+.quick-links ul li {
+    list-style: none;
+    margin: 0 0 35px 0;
+}
+
+.quick-links ul li h4 {
+    font-size: 14px;
+    color: #7bc17b;
+    font-weight: 700;
+}
+
+.quick-links ul li a {
+    font-size: 16px;
+    color: white;
+    border-bottom: 1px solid #333;
+    text-decoration: none;
+    transform: scale(1);
+    transition: all .6s ease;
+    display: inline-block;
+}
+
+.quick-links ul li a:hover {
+    transform: scale(0.965);
+    border-color: #8ad687;
+}
+
+.copy-rights {
+    width: 100%;
+    color: #898686;
+    padding: 120px 0;
+}
+
+
+
+
+.my-element {
+    opacity: 0;
+}
+
+.my-element2 {
+    opacity: 0;
+}
+
+/********** Responsive **********/
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 991px) {}
+
+@media only screen and (max-width: 767px) {}
